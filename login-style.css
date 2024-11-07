@@ -1,9 +1,6 @@
 body {
-    font-family: 'Roboto', sans-serif; /* Changed font to Roboto */
-    background-image: url('https://images.unsplash.com/photo-1509027572446-af8401acfdc3?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,83 +8,59 @@ body {
     margin: 0;
 }
 
-.outer-container {
-    background-color: rgba(255, 255, 255, 0.8); /* Increased opacity for better readability */
-    backdrop-filter: blur(10px); 
-    padding: 40px; /* Adjusted padding */
-    border: 2px solid #2f493048; 
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    font-size: 16px; 
+    text-align: center;
 }
-.logo {
-    display: block;
-    margin: 0 auto 20px; 
-    max-width: 80%; 
-    height: auto; 
-}
-
 
 h2 {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif; /* Different font for headings */
-    font-weight: 600; /* Slightly bolder */
+    margin-bottom: 20px;
+    color: #333;
 }
 
-label {
-    margin: 10px 0;
-    display: block;
-    font-weight: 500; /* Medium weight for labels */
-}
-
-input[type="text"],
-input[type="password"] {
+input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit; /* Inherit font from body */
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #5cb85c;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: 600; /* Bold font for buttons */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #4cae4c;
 }
 
-
-.login-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: #4CAF50;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
+.error-message {
+    color: red;
     margin-top: 10px;
-    font-size: 16px;
 }
 
-.login-btn:hover {
-    background-color: #45a049;
-}
-
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-    font-size: 14px; /* Smaller font for footer */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}.login-container{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }

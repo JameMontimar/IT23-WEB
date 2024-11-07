@@ -3,48 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="login-style.css">
-    <title>Login Form</title>
 </head>
 <body>
-    <div class="outer-container">      
-        <img src="https://static.vecteezy.com/system/resources/previews/007/505/757/original/slippers-icon-logo-design-illustration-template-vector.jpg" alt="my Logo" class="logo">
-        
-        <form>
-            <h2>Login</h2>
-
-            <label for="uname"><b>Username</b></label>
-            <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
-
-            <!-- Instead of a submit button, use an anchor link styled like a button -->
-            <a href="homepage-index.html" class="login-btn">Login</a>
-
-            <label>
-                <input type="checkbox" name="remember"> remember it?
-            </label>
-        </form>       
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
     </div>
 
-    <style>
-        /* Add this CSS inside login-style.css or directly in the HTML file */
-        .login-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            color: white;
-            background-color: #4CAF50;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Simulated login
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
-        .login-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
+            // For this example, we are ignoring actual validation
+            // and simply redirecting to homepage.html
+            localStorage.setItem('loggedIn', true); // Simulate login
+            window.location.href = "homepage-index.html"; // Redirect to home page
+        });
+    </script>
 </body>
 </html>

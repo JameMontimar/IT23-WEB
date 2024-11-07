@@ -1,41 +1,64 @@
-</head>
-<title>Tsinilaz</title>
-<link rel="stylesheet" type="text/css" href="about-style.css" media="screen">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="about-style.css" media="screen">
+    
+    <link rel="stylesheet" href="about-style.css">
 </head>
 
-
-<body data-new-gr-c-s-check-loaded="14.1195.0" data-gr-ext-installed="">
+<body>
     <header>
+        
         <div class="header">
             <div class="header-Left">
-                <a href="index.html" class="logo">Tsinilaz</a>
+                <div class="dropdown">
+                    <a class="logo" href="#">jambert pitik</a>
+                    <div class="dropdown-content">
+                        <a href="login.html">logout</a>
+                    </div>
+                </div>
             </div>
+            
         <div class="header-Right">
-            <a href="services.html">Services</a>
-            <a href="resume.html">Resume</a>
-            <a href="about.html">About</a>
-             <a href="testimony.html">testimonial</a>
-            <a class="active" href="homepage-index.html">Home</a>
+            <a href="homepage-index.html">Home</a>
+            <a href="overview.html">Overview</a>
+            <a class="active" href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+       
         </div>
     </div>
 
     </header>
-    <section>
-        <h1>About Me</h1>
-        <div style="text-align: center;">
-            <img src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-6/456536186_1185236749194420_852314845754277422_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=669761&_nc_eui2=AeGe-EOr4UI7Z0SPduXBj6ukqJHF7ss0zlOokcXuyzTOU4Tx6BBUH4anKwVgE66Q9uIloRz0emZD65ecdnmdXo9W&_nc_ohc=ormPqeFieeMQ7kNvgH30wx5&_nc_zt=23&_nc_ht=scontent.fmnl25-4.fna&_nc_gid=AdhTfme7AKRyKvRGoNoEvNl&oh=00_AYAdmWH92A-WnIoioZ6G4hRIG80xA6VjTdL1x0eFC7D_zg&oe=6716310B" alt="James Berth Montimar" style="width: 200px; height: 200px; border-radius: 50%; margin-top: 20px;">
+    <br>
+   
+    <div class="style">
+        <div class="parent">
+            <div class="image"> <br>
+                <i> <p style="font-family: 'Times New Roman', Times, serif;">"Capturing beautiful moments through the lens."</p></i><br>
+                <img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/322475558_1129134781123121_562693351036519130_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=LNyhI09OPvIQ7kNvgEzcyNv&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=AmEL3-Csd8SOV-062mVBDQ9&oh=00_AYDUjSmMBQjazH0HIYzZw3bGRe4ejBRKeZC4MarPZ8kQlw&oe=6731CB5E" alt="my image"> <br>
+                <p>Hello, I'm <b>Jambert</b>, an IT student at NBSC.</p>
+                <p>Explore my web, discover everything, and let me help you create memories through this beautiful images! </p> <br>
+                <p>According to the study of Berman, Jonides and Kaplan about "The Cognitive Benefits of Interacting With Nature"
+                    in 2008, exposure to natural environments, including open skies, can have a positive impact on attention and 
+                    mental well-being. And a lot of people seem to be having a hard time and are mentally tired, and these photos 
+                    have a calming influence on people's emotions and well-being.</p>
+            </div>
         </div>
-    </section>
-    
-    <h2>I'm James Berth M. Montimar​</h2>
-    
+    </div>
 
-    <footer class="">
-        <div class="footer">
-            © Copyright <strong><span>Tsinilaz</span></strong>. All Rights Reserved
-        </div>
-    </footer>
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = "login.html";
+        }
 
-
-
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = "login.html";
+        });
+    </script>
 </body>
+</html>
